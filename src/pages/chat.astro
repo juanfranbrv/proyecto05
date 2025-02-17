@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div>
+        <div>
+            <h1>Interactúa con el Backend</h1>
+
+            <form
+                hx-get="https://proyecto05-backend-ten.vercel.app/llm"
+                hx-target="#resultado"
+                hx-swap="innerHTML"
+            >
+                <div>
+                    <label for="prompt"> Pregunta: </label>
+                    <input type="text" id="prompt" name="prompt" required />
+                </div>
+                <button type="submit"> Enviar </button>
+            </form>
+
+            <!-- Área para mostrar el resultado con enmarcado -->
+            <div id="resultado">
+                <!-- Aquí se mostrará la respuesta -->
+            </div>
+        </div>
+    </div>
+</Layout>
